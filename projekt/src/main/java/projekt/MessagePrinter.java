@@ -2,18 +2,33 @@ package projekt;
 
 public class MessagePrinter {
 	
-	private MessageProducer messageProducer = new SimpleMessageProducer();
+	private MessageProducer producer;
 	
+	
+	
+	MessagePrinter(){}
+	
+
 	public MessagePrinter(MessageProducer messageProducer)
 	{
-		this.messageProducer = messageProducer;
+		this.producer = messageProducer;
 	}
 	
 	
 	public void printMessage()
 	{
-		String message = messageProducer.getMessage();
+		String message = producer.getMessage();
 		System.out.println(message);
+	}
+
+
+	public MessageProducer getProducer() {
+		return producer;
+	}
+
+
+	public void setProducer(MessageProducer producer) {
+		this.producer = producer;
 	}
 	
 	
