@@ -1,7 +1,10 @@
 package projekt;
 
+import org.springframework.stereotype.Component;
+
 public class MessagePrinter {
 	
+	@Component
 	private MessageProducer producer;
 	
 	
