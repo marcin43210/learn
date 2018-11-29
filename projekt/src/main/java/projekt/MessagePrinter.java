@@ -5,17 +5,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessagePrinter {
 	
-	@Autowired
+	
 	private MessageProducer producer;
-	
-	
-	
+		
+
+
 	MessagePrinter(){}
 	
-
-	public MessagePrinter(MessageProducer messageProducer)
+	
+	public MessagePrinter(MessageProducer producer)
 	{
-		this.producer = messageProducer;
+		this.producer = producer;
 	}
 	
 	
@@ -25,15 +25,12 @@ public class MessagePrinter {
 		System.out.println(message);
 	}
 
-
 	public MessageProducer getProducer() {
 		return producer;
 	}
-
-
+	@Autowired
 	public void setProducer(MessageProducer producer) {
 		this.producer = producer;
 	}
-	
 	
 }
